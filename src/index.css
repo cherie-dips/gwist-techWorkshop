@@ -1,0 +1,22 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global defaults — DO NOT set flexbox or centering here */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: #000000;  /* ok */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;  /* optional: prevents scrollbars */
+}
+
+/* Root should take full screen */
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
