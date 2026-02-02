@@ -8,14 +8,14 @@ export async function sendMessage(messages) {
     throw new Error('VITE_GROQ_API_KEY is not set in environment variables')    // If the Groq API Key is not set in the environment variables, then throw an error.
   }
 
-  const response = await fetch(GROQ_API_URL, {    // fetch is used to send the messages to the Groq API.
+  const response = await fetch(GROQ_API_URL, {    
     method: '_____',                               // POST: is used to send the messages to the Groq API.
     headers: {                                    // headers: there are many headers in the API. Here we are using Content-Type and Authorization.
-      'Content-Type': 'application/_____',         // Content-Type: is used to tell the API that the body of the request is in JSON format.
-      'Authorization': `Bearer ${_____}`,         // Authorization: is used to tell the API that the request is authorized and bearer is apiKey.
+      'Content-Type': 'application/_____',         // Content-Type: is used to tell the format of the body of the request.
+      'Authorization': `Bearer ${_____}`,         // Authorization: is used to tell the API that the request is authorized.
     },
     body: JSON.stringify({
-      model: '_____________',                // model: is used to tell the API that the model to be used is llama-3.1-8b-instant.
+      model: '_____________',                // model: is used to tell the API model to be used.
       messages: messages.map(msg => ({
         role: msg.role,                            // role: here role is user or assistant
         content: msg.content,                      // content: here content is the message that the user or assistant has sent.
